@@ -4,7 +4,10 @@
 defineProps<{
   checkList: readonly boolean[]
   labels: readonly string[]
-  onCheck: (index: number) => void
+}>()
+
+const emit = defineEmits<{
+  check: [index: number]
 }>()
 </script>
 
@@ -15,7 +18,7 @@ defineProps<{
         <input
           type="checkbox"
           :checked="checkList[idx]"
-          @click="onCheck(idx)"
+          @click="emit('check', idx)"
         />
         {{ label }}
       </label>

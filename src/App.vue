@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Before from './components/before/App.vue'
+import After from './components/after/App.vue'
 </script>
 
 <template>
@@ -15,6 +16,8 @@ import Before from './components/before/App.vue'
 
   <main>
     <Before />
+    <hr />
+    <After />
   </main>
 </template>
 
@@ -22,6 +25,10 @@ import Before from './components/before/App.vue'
 .logo {
   display: block;
   margin: 0 auto 2rem;
+}
+
+hr {
+  margin: 1rem 0;
 }
 
 ::v-deep(label):has(input[type='checkbox']) {

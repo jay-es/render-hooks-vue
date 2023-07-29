@@ -1,5 +1,5 @@
 <script setup lang="ts">
-//
+import Before from './components/before/App.vue'
 </script>
 
 <template>
@@ -14,7 +14,7 @@
   </header>
 
   <main>
-    <!--  -->
+    <Before />
   </main>
 </template>
 
@@ -22,5 +22,9 @@
 .logo {
   display: block;
   margin: 0 auto 2rem;
+}
+
+::v-deep(label):has(input[type='checkbox']) {
+  user-select: none;
 }
 </style>
